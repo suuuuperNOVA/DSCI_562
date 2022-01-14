@@ -1,0 +1,914 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to DSCI 562: Regression II &#8212; DSCI 562 - Regression II</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lecture Learning Objectives" href="lecture-learning-objectives.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/UBC_MDS_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">DSCI 562 - Regression II</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1 current">
+  <a class="reference internal" href="#">
+   Welcome to DSCI 562: Regression II
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lecture-learning-objectives.html">
+   Lecture Learning Objectives
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes/lecture1_beyond_OLS.html">
+   Lecture 1 - Beyond Ordinary Least-Squares!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notes/lecture2_glm_binary_logistic_and_count_regression.html">
+   Lecture 2 - Foundations of Generalized Linear Models: Binary Logistic and Count Regressions
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/README.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.ubc.ca/mds-2021-22/DSCI_562_regr-2_students"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.ubc.ca/mds-2021-22/DSCI_562_regr-2_students/issues/new?title=Issue%20on%20page%20%2FREADME.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#course-learning-objectives">
+   Course Learning Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#teaching-team">
+   Teaching Team
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lecture-schedule">
+   Lecture Schedule
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deliverables">
+   Deliverables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lectures">
+   Lectures
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#schedule">
+     Schedule
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#labs">
+   Labs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Schedule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lab-topics-and-due-dates">
+     Lab Topics and Due Dates
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quizzes">
+   Quizzes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#office-hours">
+   Office hours
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-material">
+   Reference Material
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recommended-course-reviews">
+   Recommended Course Reviews
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataset-references">
+   Dataset References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#policies">
+   Policies
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attribution">
+   Attribution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dealing-with-covid-19">
+   Dealing With COVID-19
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#covid-safety-at-ubc">
+     Covid Safety at UBC
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#official-statement-from-ubc-regarding-the-online-learning-experience">
+   Official statement from UBC regarding the online learning experience:
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Welcome to DSCI 562: Regression II</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#course-learning-objectives">
+   Course Learning Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#teaching-team">
+   Teaching Team
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lecture-schedule">
+   Lecture Schedule
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deliverables">
+   Deliverables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lectures">
+   Lectures
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#schedule">
+     Schedule
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#labs">
+   Labs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Schedule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lab-topics-and-due-dates">
+     Lab Topics and Due Dates
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quizzes">
+   Quizzes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#office-hours">
+   Office hours
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-material">
+   Reference Material
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recommended-course-reviews">
+   Recommended Course Reviews
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataset-references">
+   Dataset References
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#policies">
+   Policies
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attribution">
+   Attribution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dealing-with-covid-19">
+   Dealing With COVID-19
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#covid-safety-at-ubc">
+     Covid Safety at UBC
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#official-statement-from-ubc-regarding-the-online-learning-experience">
+   Official statement from UBC regarding the online learning experience:
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="welcome-to-dsci-562-regression-ii">
+<h1>Welcome to DSCI 562: Regression II<a class="headerlink" href="#welcome-to-dsci-562-regression-ii" title="Permalink to this headline">¶</a></h1>
+<p>Let us explore regression techniques beyond Ordinary Least-Squares! What if the response is still continuous but non-negative, or our observations are not independent anymore? Maybe the response is binary, a count, or categorical. Moreover, what if we have censored data? In many other cases, we might not be interested in modelling the conditioned mean response. Different Data Science projects will require making inference on different conditioned response quantiles. This course covers useful extensions to ordinary linear regression: generalized linear models, mixed-effects, smoothing, quantile and robust regression, and techniques for dealing with missing data.</p>
+<p><strong>Slack Channel</strong>: <a class="reference external" href="https://ubc-mds.slack.com/messages/562_regr-2">Access here.</a></p>
+<div class="section" id="course-learning-objectives">
+<h2>Course Learning Objectives<a class="headerlink" href="#course-learning-objectives" title="Permalink to this headline">¶</a></h2>
+<p>By the end of the course, students are expected to:</p>
+<ul class="simple">
+<li><p>Describe the value of making parametric assumptions in regression.</p></li>
+<li><p>Fit model functions that represent probabilistic quantities besides the mean.</p></li>
+<li><p>Identify situations where ordinary linear regression is sub-optimal, and apply alternative regression methods that better address the situation.</p></li>
+</ul>
+</div>
+<div class="section" id="teaching-team">
+<h2>Teaching Team<a class="headerlink" href="#teaching-team" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Position</p></th>
+<th class="text-align:center head"><p>Name</p></th>
+<th class="text-align:center head"><p>Slack Handle</p></th>
+<th class="text-align:center head"><p>GHE Handle</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>Lecture/Lab Instructor</p></td>
+<td class="text-align:center"><p><a class="reference external" href="https://alexrod.netlify.app">Alexi Rodríguez-Arelis</a></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&#64;Alexi</span></code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&#64;alexrod6</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Teaching Assistant</p></td>
+<td class="text-align:center"><p>Yulia Egorova</p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&#64;Yulia</span> <span class="pre">Egorova</span> </code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&#64;yulia90</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Teaching Assistant</p></td>
+<td class="text-align:center"><p>Katie Florko</p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&#64;Katie</span> <span class="pre">Florko</span></code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&#64;kflork</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Teaching Assistant</p></td>
+<td class="text-align:center"><p>Siddhesh Khandelwal</p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&#64;Siddhesh</span></code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&#64;skhandel</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Teaching Assistant</p></td>
+<td class="text-align:center"><p>Mohamad Amin Mohamadi</p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&#64;Amin</span></code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&#64;lemohama</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Teaching Assistant</p></td>
+<td class="text-align:center"><p>Alireza Naderi</p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&#64;Alireza</span> <span class="pre">Naderi</span></code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&#64;alinad01</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Teaching Assistant</p></td>
+<td class="text-align:center"><p>Shuyi Tan</p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&#64;Shuyi</span> <span class="pre">Tan</span></code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">&#64;shuyitan</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="lecture-schedule">
+<h2>Lecture Schedule<a class="headerlink" href="#lecture-schedule" title="Permalink to this headline">¶</a></h2>
+<p>This course occurs during <strong>Block 4</strong> in the 2021/22 school year.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Lecture</p></th>
+<th class="head"><p>Topic</p></th>
+<th class="head"><p>Suggested Reading Material</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td><p>Beyond Ordinary Least-Squares!</p></td>
+<td><p><ul><li>Chapter 1 (Review of Multiple Linear Regression): <a class="reference external" href="https://bookdown.org/roback/bookdown-BeyondMLR/ch-MLRreview.html">BMLR</a> <li> Logarithmic Transformations in Regression: <a class="reference external" href="https://libkey.io/libraries/498/articles/62044506/full-text-file?utm_source=api_542">Do You Transform Back Correctly?</a> </ul></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>2</p></td>
+<td><p>Foundations of Generalized Linear Models: Binary Logistic and Count Regressions</p></td>
+<td><p><ul><li>Basics of GLMs: <a class="reference external" href="https://bookdown.org/roback/bookdown-BeyondMLR/ch-glms.html">BMLR</a> 5.3 <li>Binomial logistic regression: <a class="reference external" href="https://bookdown.org/roback/bookdown-BeyondMLR/ch-logreg.html">BMLR</a> 6.2, 6.5 <li>Count regression: <a class="reference external" href="https://bookdown.org/roback/bookdown-BeyondMLR/ch-poissonreg.html">BMLR</a> 4.2, 4.4, 4.9</ul></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>3</p></td>
+<td><p>Generalized Linear Models (GLMs): Multinomial and Ordinal Logistic Regressions</p></td>
+<td><p><ul><li><a class="reference external" href="https://ubc.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwbV1LT8MwDLZgu2wXoIDoGFPgPtZH-og0Ia3TJi5cEOIaNV1yGRRp3fj9OOlDLeqpSquqdVo7n53PNoDvPTvzfzbBVSFVmfAYFaGQKfWEEhnNZKBUlO7KpNcWVafOltYkS51f1xCmu2zpRUWX7o0box-AWCTi6M-fBw5tmhsgQGCoWT5ldcWnejyGcVrs0bag3TkWHcjZSsnX6872EoZSJyNcwZnMLbioICOpFLKwYPzWlF3F0UhDx7Ly8jU8opuJvzExvW4KogOuZPmdHvYv78uFOd7AZLv5WL_O8bG8iuNw1L1Y98W4hUH-k8s7INR1d652EphyqYoi4SsnZqFy_EBIXHlseGoJxH-_zAZswTtS20BqObm5XrFC-SZZV3Nog9XzIjZM22fr3TIehyGLAzrpvekeRgg5gjKIMYXB8XCSD2Z6Z-YDzWC4WiXJ5x9w-aQv">Faraway:</a> Chapter 5</ul></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>4</p></td>
+<td><p>Linear Mixed-Effects Models</p></td>
+<td><p><ul><li> Initial motivation: <a class="reference external" href="https://www.statlearning.com">ISL</a> 3.3. Potential Problems (<em>Correlation of Error Terms</em>) <li><a class="reference external" href="https://bookdown.org/roback/bookdown-BeyondMLR/ch-beyondmost.html">BMLR</a> from 8.1 to 8.8 </ul></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>5</p></td>
+<td><p>Survival Analysis</p></td>
+<td><p>See Kleinbaum and Klein (2005) in <strong>Reference Material</strong></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>6</p></td>
+<td><p>Missing Data</p></td>
+<td><p>See van Buuren, S. (2012) in <strong>Reference Material</strong></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>7</p></td>
+<td><p>Quantile Regression</p></td>
+<td><p><ul><li><a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/log?L=GW2JH3XR2C&amp;D=-K7&amp;J=TC0000904267&amp;P=Link&amp;PT=EZProxy&amp;H=d91b1366d8&amp;U=https%3A%2F%2Fezproxy.library.ubc.ca%2Flogin%3Furl%3Dhttps%3A%2F%2Flink.springer.com%2F10.1007%2F978-3-642-34333-9">Fahrmeir (2013)</a> 10. Quantile Regression (except 10.2.2 Bayesian Quantile Regression) </ul></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>8</p></td>
+<td><p>Local and Robust Regressions</p></td>
+<td><p><ul><li> <a class="reference external" href="https://www.statlearning.com">ISL</a> 7.2 Step Functions <li><a class="reference external" href="https://www.statlearning.com">ISL</a> 7.6 Local Regression <li> <a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/log?L=GW2JH3XR2C&amp;D=ZEEST&amp;J=TC0000239030&amp;P=Link&amp;PT=EZProxy&amp;H=48e3fef958&amp;U=https%3A%2F%2Fezproxy.library.ubc.ca%2Flogin%3Furl%3Dhttps%3A%2F%2Fonlinelibrary.wiley.com%2Fdoi%2Fbook%2F10.1002%2F0471725382">Rousseeuw and Leroy (2003)</a> 1. Introduction <li > <a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/log?L=GW2JH3XR2C&amp;D=ZEEST&amp;J=TC0000239030&amp;P=Link&amp;PT=EZProxy&amp;H=48e3fef958&amp;U=https%3A%2F%2Fezproxy.library.ubc.ca%2Flogin%3Furl%3Dhttps%3A%2F%2Fonlinelibrary.wiley.com%2Fdoi%2Fbook%2F10.1002%2F0471725382">Rousseeuw and Leroy (2003)</a> 2. Simple Regression </ul></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="deliverables">
+<h2>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this headline">¶</a></h2>
+<p>This is an <strong>assignment-based course</strong>. The following deliverables will determine your course grade:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Assessment</p></th>
+<th class="text-align:center head"><p>Weight</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>Lab Assignment 1</p></td>
+<td class="text-align:center"><p>15%</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Lab Assignment 2</p></td>
+<td class="text-align:center"><p>15%</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Lab Assignment 3</p></td>
+<td class="text-align:center"><p>15%</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Lab Assignment 4</p></td>
+<td class="text-align:center"><p>15%</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Quiz 1</p></td>
+<td class="text-align:center"><p>20%</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Quiz 2</p></td>
+<td class="text-align:center"><p>20%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="lectures">
+<h2>Lectures<a class="headerlink" href="#lectures" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="schedule">
+<h3>Schedule<a class="headerlink" href="#schedule" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Day</p></th>
+<th class="text-align:center head"><p>Tuesday</p></th>
+<th class="text-align:center head"><p>Thursday</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>Time</p></td>
+<td class="text-align:center"><p>11:00 a.m. to 12:20 p.m. (PST)</p></td>
+<td class="text-align:center"><p>11:00 a.m to 12:20 p.m. (PST)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Room</p></td>
+<td class="text-align:center"><p><a class="reference external" href="https://canvas.ubc.ca/courses/83553/external_tools/15408">Virtual</a></p></td>
+<td class="text-align:center"><p><a class="reference external" href="https://canvas.ubc.ca/courses/83553/external_tools/15408">Virtual</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Lecture instructor</p></td>
+<td class="text-align:center"><p>Alexi Rodríguez-Arelis</p></td>
+<td class="text-align:center"><p>Alexi Rodríguez-Arelis</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Teaching Assistant</p></td>
+<td class="text-align:center"><p>Siddhesh Khandelwal</p></td>
+<td class="text-align:center"><p>Yulia Egorova</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="labs">
+<h2>Labs<a class="headerlink" href="#labs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Schedule<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p></p></th>
+<th class="text-align:center head"><p><strong>L01</strong></p></th>
+<th class="text-align:center head"><p><strong>L02</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><strong>Day</strong></p></td>
+<td class="text-align:center"><p>Thursday</p></td>
+<td class="text-align:center"><p>Wednesday</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>Time</strong></p></td>
+<td class="text-align:center"><p>1:00 - 2:50 (PST)</p></td>
+<td class="text-align:center"><p>2:00 - 3:50 p.m. (PST)</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><strong>Room</strong></p></td>
+<td class="text-align:center"><p><a class="reference external" href="https://canvas.ubc.ca/courses/83553/external_tools/15408">Virtual</a></p></td>
+<td class="text-align:center"><p><a class="reference external" href="https://canvas.ubc.ca/courses/83553/external_tools/15408">Virtual</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>Lab instructor</strong></p></td>
+<td class="text-align:center"><p>Alexi Rodríguez-Arelis</p></td>
+<td class="text-align:center"><p>Alexi Rodríguez-Arelis</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><strong>Teaching Assistants</strong></p></td>
+<td class="text-align:center"><p>Mohamad Amin Mohamadi and Alireza Naderi</p></td>
+<td class="text-align:center"><p>Yulia Egorova and Katie Florko</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="lab-topics-and-due-dates">
+<h3>Lab Topics and Due Dates<a class="headerlink" href="#lab-topics-and-due-dates" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p></p></th>
+<th class="text-align:center head"><p><strong>Lab Topic</strong></p></th>
+<th class="text-align:center head"><p><strong>Due Date</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><strong>1</strong></p></td>
+<td class="text-align:center"><p>Introduction to Generalized Linear Models<br>(Lectures 1 and 2)</p></td>
+<td class="text-align:center"><p>2022-01-15 6:00 p.m. (PST)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>2</strong></p></td>
+<td class="text-align:center"><p>Categorical and Mixed-Effects Regression Models<br>(Lectures 3 and 4)</p></td>
+<td class="text-align:center"><p>2022-01-22 6:00 p.m. (PST)</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><strong>3</strong></p></td>
+<td class="text-align:center"><p>Survival Analysis and Missing Data<br>(Lectures 5 and 6)</p></td>
+<td class="text-align:center"><p>2022-01-29 6:00 p.m. (PST)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>4</strong></p></td>
+<td class="text-align:center"><p>Quantile, Robust, and Local Regressions<br>(Lectures 7 and 8)</p></td>
+<td class="text-align:center"><p>2022-02-05 6:00 p.m. (PST)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="quizzes">
+<h2>Quizzes<a class="headerlink" href="#quizzes" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference external" href="https://ubc-mds.github.io/calendar/">calendar</a>.</p>
+</div>
+<div class="section" id="office-hours">
+<h2>Office hours<a class="headerlink" href="#office-hours" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p></p></th>
+<th class="text-align:center head"><p><strong>Office hour 1</strong></p></th>
+<th class="text-align:center head"><p><strong>Office hour 2</strong></p></th>
+<th class="text-align:center head"><p><strong>Office hour 3</strong></p></th>
+<th class="text-align:center head"><p><strong>Office hour 4</strong></p></th>
+<th class="text-align:center head"><p><strong>Office hour 5</strong></p></th>
+<th class="text-align:center head"><p><strong>Office hour 6</strong></p></th>
+<th class="text-align:center head"><p><strong>Office hour 7</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><strong>Day</strong></p></td>
+<td class="text-align:center"><p>Monday</p></td>
+<td class="text-align:center"><p>Tuesday</p></td>
+<td class="text-align:center"><p>Wednesday</p></td>
+<td class="text-align:center"><p>Thursday</p></td>
+<td class="text-align:center"><p>Thursday</p></td>
+<td class="text-align:center"><p>Friday</p></td>
+<td class="text-align:center"><p>Friday</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>Time</strong></p></td>
+<td class="text-align:center"><p>4:00 - 5:00 p.m. (PST)</p></td>
+<td class="text-align:center"><p>4:00 - 5:00 p.m. (PST)</p></td>
+<td class="text-align:center"><p>4:00 - 5:00 p.m. (PST)</p></td>
+<td class="text-align:center"><p>5:00 - 6:00 p.m. (PST)</p></td>
+<td class="text-align:center"><p>6:00 - 7:00 p.m. (PST)</p></td>
+<td class="text-align:center"><p>1:00 - 2:00 p.m. (PST)</p></td>
+<td class="text-align:center"><p>5:00 - 6:00 p.m. (PST)</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><strong>Room</strong></p></td>
+<td class="text-align:center"><p><a class="reference external" href="https://canvas.ubc.ca/courses/83553/external_tools/15408">Virtual</a></p></td>
+<td class="text-align:center"><p><a class="reference external" href="https://canvas.ubc.ca/courses/83553/external_tools/15408">Virtual</a></p></td>
+<td class="text-align:center"><p><a class="reference external" href="https://canvas.ubc.ca/courses/83553/external_tools/15408">Virtual</a></p></td>
+<td class="text-align:center"><p><a class="reference external" href="https://canvas.ubc.ca/courses/83553/external_tools/15408">Virtual</a></p></td>
+<td class="text-align:center"><p><a class="reference external" href="https://canvas.ubc.ca/courses/83553/external_tools/15408">Virtual</a></p></td>
+<td class="text-align:center"><p><a class="reference external" href="https://canvas.ubc.ca/courses/83553/external_tools/15408">Virtual</a></p></td>
+<td class="text-align:center"><p><a class="reference external" href="https://canvas.ubc.ca/courses/83553/external_tools/15408">Virtual</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>Person</strong></p></td>
+<td class="text-align:center"><p>Shuyi</p></td>
+<td class="text-align:center"><p>Alireza</p></td>
+<td class="text-align:center"><p>Siddhesh</p></td>
+<td class="text-align:center"><p>Yulia</p></td>
+<td class="text-align:center"><p>Alexi</p></td>
+<td class="text-align:center"><p>Katie</p></td>
+<td class="text-align:center"><p>Amin</p></td>
+</tr>
+</tbody>
+</table>
+<p>See <a class="reference external" href="https://ubc-mds.github.io/calendar/">calendar</a> for the most up to date information.</p>
+</div>
+<div class="section" id="reference-material">
+<h2>Reference Material<a class="headerlink" href="#reference-material" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Agresti, A (2012). <em>Categorical Data Analysis</em>, John Wiley &amp; Sons, Incorporated. ProQuest Ebook Central.</p>
+<ul>
+<li><p>The e-book is available through the <a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/log?L=GW2JH3XR2C&amp;D=ZEEST&amp;J=TC0000182416&amp;P=Link&amp;PT=EZProxy&amp;H=af1255a89f&amp;U=https%3A%2F%2Fezproxy.library.ubc.ca%2Flogin%3Furl%3Dhttps%3A%2F%2Fonlinelibrary.wiley.com%2Fdoi%2Fbook%2F10.1002%2F0470114754">UBC Library</a>. You can obtain a PDF copy with your CWL account. This book is helpful for generalized linear models with discrete responses.</p></li>
+</ul>
+</li>
+<li><p>Collett, D. (2003). <em>Modelling Binary Data (2nd ed.)</em>. Chapman and Hall/CRC. https://doi.org/10.1201/b16654</p>
+<ul>
+<li><p>The e-book is available through the <a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/log?L=GW2JH3XR2C&amp;D=JTX&amp;J=TC0001459465&amp;P=Link&amp;PT=EZProxy&amp;H=a796b2aeda&amp;U=https%3A%2F%2Fezproxy.library.ubc.ca%2Flogin%3Furl%3Dhttps%3A%2F%2Fwww.taylorfrancis.com%2Fbooks%2F9780429129087">UBC Library</a>.</p></li>
+</ul>
+</li>
+<li><p>Dambolena, I. G., Eriksen, S. E., and Kopcso, D. P. (2009). <a class="reference external" href="https://login.ezproxy.library.ubc.ca/login?url=https://www.tandfonline.com/doi/pdf/10.1080/10511970802234976?needAccess=true">Logarithmic transformations in regression: Do you transform back correctly?</a> <em>PRIMUS : Problems, Resources, and Issues in Mathematics Undergraduate Studies</em>, 19(3), 280-295.</p></li>
+<li><p>Fahrmeir, L. (2013). <em>Regression Models, Methods and Aplications</em>. Springer Berlin Heidelberg.</p>
+<ul>
+<li><p>The e-book is available through the <a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/log?L=GW2JH3XR2C&amp;D=-K7&amp;J=TC0000904267&amp;P=Link&amp;PT=EZProxy&amp;H=d91b1366d8&amp;U=https%3A%2F%2Fezproxy.library.ubc.ca%2Flogin%3Furl%3Dhttps%3A%2F%2Flink.springer.com%2F10.1007%2F978-3-642-34333-9">UBC Library</a>. You can obtain a PDF copy with your CWL account.</p></li>
+</ul>
+</li>
+<li><p>Faraway, Julian J. (2014). <em>Linear Models with <code class="docutils literal notranslate"><span class="pre">R</span></code></em>, CRC Press LLC. ProQuest Ebook Central.</p>
+<ul>
+<li><p>The e-book is available through the <a class="reference external" href="https://ubc.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwbV1LT8MwDLZgu2wXoIDoGFPgPtZH-og0Ia3TJi5cEOIaNV1yGRRp3fj9OOlDLeqpSquqdVo7n53PNoDvPTvzfzbBVSFVmfAYFaGQKfWEEhnNZKBUlO7KpNcWVafOltYkS51f1xCmu2zpRUWX7o0box-AWCTi6M-fBw5tmhsgQGCoWT5ldcWnejyGcVrs0bag3TkWHcjZSsnX6872EoZSJyNcwZnMLbioICOpFLKwYPzWlF3F0UhDx7Ly8jU8opuJvzExvW4KogOuZPmdHvYv78uFOd7AZLv5WL_O8bG8iuNw1L1Y98W4hUH-k8s7INR1d652EphyqYoi4SsnZqFy_EBIXHlseGoJxH-_zAZswTtS20BqObm5XrFC-SZZV3Nog9XzIjZM22fr3TIehyGLAzrpvekeRgg5gjKIMYXB8XCSD2Z6Z-YDzWC4WiXJ5x9w-aQv">UBC Library</a>. You can obtain a PDF copy with your CWL account. This book is great for learning how to work within the <code class="docutils literal notranslate"><span class="pre">R</span></code> environment with the models we will be working on. Its approach is essentially practical.</p></li>
+</ul>
+</li>
+<li><p>Gelman, A. and Hill, J. (2007). <em>Data Analysis Using Regression and Multilevel/Hierarchical Models</em>. Analytical Methods for Social Research. Cambridge University Press.</p>
+<ul>
+<li><p>The physical book is available through the <a class="reference external" href="http://webcat2.library.ubc.ca/vwebv/search?searchArg=Data%20analysis%20using%20regression%20and%20multilevel%2Fhierarchical%20models%20%2F&amp;searchCode=TALL&amp;searchType=1">UBC Library</a>. This book is pretty useful and practical as introductory material.</p></li>
+</ul>
+</li>
+<li><p>James, G., Witten, D., Hastie, T., and Tibshirani, R. (2014). <a class="reference external" href="https://www.statlearning.com"><em>An Introduction to Statistical Learning: with Applications in <code class="docutils literal notranslate"><span class="pre">R</span></code></em></a>. Springer Publishing Company, Incorporated.</p></li>
+<li><p>Kleinbaum, D. G. and Klein, M. (2005). <em>Survival analysis : A Self-Learning Text</em>. Springer.</p>
+<ul>
+<li><p>The e-book is available through the <a class="reference external" href="https://ezproxy.library.ubc.ca/login?auth=shibboleth&amp;url=https://link.springer.com/10.1007/0-387-29150-4">UBC Library</a>. This book is a good start for Survival Analysis:</p>
+<ul>
+<li><p><strong>Chapter 1 (Introduction):</strong> Introduction to Survival Analysis (I), Censored Data (II), Terminology and Notation (III).</p></li>
+<li><p><strong>Chapter 2 (Kaplan-Meier Curves):</strong> Review (I), Example of Kaplan-Meier Curves (II), General Features of  Kaplan-Meier Curves (III), Confidence Intervals for Kaplan-Meier Curves (VII and VIII).</p></li>
+<li><p><strong>Chapter 3 (Cox Proportional Hazards Model):</strong> Example of Cox Proportional Hazards Model (I), Formula of Cox Proportional Hazards Model (II), Why the Cox Proportional Hazards Model is Popular (III), Estimation of the Cox Proportional Hazards Model (IV).</p></li>
+<li><p><strong>Chapter 7 (Parametric Model):</strong> Overview (I), Relationship Between the Probability Density Function with Hazard and Survival Functions (II), Weibull Example (IV).</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Rousseeuw, L. P. J. and Leroy A. M. (2003). <em>Robust Regression and Outlier Detection</em>. Hoboken, NJ : Wiley-Interscience.</p>
+<ul>
+<li><p>The e-book is available through the <a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/log?L=GW2JH3XR2C&amp;D=ZEEST&amp;J=TC0000239030&amp;P=Link&amp;PT=EZProxy&amp;H=48e3fef958&amp;U=https%3A%2F%2Fezproxy.library.ubc.ca%2Flogin%3Furl%3Dhttps%3A%2F%2Fonlinelibrary.wiley.com%2Fdoi%2Fbook%2F10.1002%2F0471725382">UBC Library</a>. You can obtain a PDF copy with your CWL account.</p></li>
+</ul>
+</li>
+<li><p>Roback, P. and  Legler, J. (2020). <a class="reference external" href="https://bookdown.org/roback/bookdown-BeyondMLR/"><em>Beyond Multiple Linear Regression</em></a>.</p></li>
+<li><p>Rubin, D. B. (1987). <em>Multiple Imputation for Nonresponse in Surveys</em>. Wiley.</p>
+<ul>
+<li><p>The e-book is available through the <a class="reference external" href="https://gw2jh3xr2c.search.serialssolutions.com/log?L=GW2JH3XR2C&amp;D=ZEEST&amp;J=TC0000340639&amp;P=Link&amp;PT=EZProxy&amp;H=6c88ebd0c3&amp;U=https%3A%2F%2Fezproxy.library.ubc.ca%2Flogin%3Furl%3Dhttps%3A%2F%2Fonlinelibrary.wiley.com%2Fdoi%2Fbook%2F10.1002%2F9780470316696">UBC Library</a>. You can obtain a PDF copy with your CWL account.</p></li>
+</ul>
+</li>
+<li><p>van Buuren, S. (2012). <a class="reference external" href="https://stefvanbuuren.name/fimd/"><em>Flexible Imputation of Missing Data</em></a>:</p>
+<ul>
+<li><p><strong>1.1 The problem of missing data.</strong></p></li>
+<li><p><strong>1.2 Concepts of MCAR, MAR and MNAR.</strong></p></li>
+<li><p><strong>1.3 Ad-hoc solutions.</strong></p></li>
+<li><p><strong>1.4 Multiple imputation in a nutshell.</strong></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="recommended-course-reviews">
+<h2>Recommended Course Reviews<a class="headerlink" href="#recommended-course-reviews" title="Permalink to this headline">¶</a></h2>
+<p>This course is entirely taught in <code class="docutils literal notranslate"><span class="pre">R</span></code> (we will follow the <a class="reference external" href="https://style.tidyverse.org/index.html"><code class="docutils literal notranslate"><span class="pre">tidyverse</span></code> style guide</a>) with a reasonable mathematical and statistical basis. We strongly recommend reviewing the following courses:</p>
+<ul class="simple">
+<li><p><em>DSCI 551: Descriptive Statistics and Probability for Data Science</em>, for basic statistical concepts and familiarity with the mathematical notation.</p></li>
+<li><p><em>DSCI 552: Statistical Inference and Computation I</em>, for statistical inference concepts with a frequentist approach.</p></li>
+<li><p><em>DSCI 561: Regression I</em>, since the topics of this course follow the same thread.</p></li>
+<li><p><em>DSCI 531: Data Visualization I</em>, for plotting tools using the package <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="dataset-references">
+<h2>Dataset References<a class="headerlink" href="#dataset-references" title="Permalink to this headline">¶</a></h2>
+<p>These are the papers from which each dataset used in the lectures comes from. If you are interested in knowing more about them, you can obtain a PDF copy of each paper with your CWL account via the UBC library:</p>
+<ul class="simple">
+<li><p>Brockmann, H.J. (1996). <a class="reference external" href="https://ubc.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwrV3JasMwEBUlpZBLl7Sl6YY_oE4sy5sgFEpICKU9NadcjFYSmtghCyRf0t-tJC_EPhRaepMHS8jSSPM0M3oGALkdx67tCYRyKV0GacCp9CBX60RCySMcYiigy2qpOq_F1ZiMLqL0v-mFYrZvvd4JXXcPEnOUZbU1z6W-fxdoh6eO-XQUvDyGCnXrbK_hxCkDDCHKgs9KH20FelDOR_pzWxXbdYhljTEanoF10e8iC6V2SbDK9Pg_H3gOTnPsar1kynYBjkTSAs1yC923wMkkNaVL8NVbkNXn8wcxjJ8b0euaZysTvyuzVJUYH9i6Kpsl1ijVOSbTtPZ2f6V6nYuectnbbLGdb2tNLNP5fjkVi1J-BcbDwbg_svOfQNhMIRdsu4KHEnIsIiQYJoGQvsKQmAuOsE8lojRnrPEIlZQHHIUEEs8PBVHQjaJr0EjSRNwAS8ebmMNk4DHkRYgQSt2ARoxRnzuhJG2AitmNlxnVR3x4REI41sMf6-GP8-GPd20QmVn7RZV4MB7p0u3fq96BZpY-rn1B96CxWW3FgyGOeDR6_g1rIQSN">Satellite Male Groups in Horseshoe Crabs, Limulus polyphemus</a>. <em>Ethology</em>, 102: 1-21.</p></li>
+<li><p>Deb, P. and Trivedi, P. (1997). <a class="reference external" href="https://ubc.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwnV1tS8MwEA5uftAvvk6cL6N_oK5L0pfJUEr34gQZ4j75JaZLCsOtzqng_os_1kuTDjsVwU-lF9oL5Mg9x909hxDBZ469cick3G0GggcJ9YXHSUIDb6RyXn6DgsPmcqVUx89bY1SVZVYmmCX1AS_FE1nHOHCxiy9nz7aaHqWyrGaURgmVwEI1Te7yPlYM7BpLEtvHLi54IF2E-AWZUuNautvoId9FXlOy0vJX5G38x3Z30JaBnVao7WQXrcl0D23kXckv--ijNeXzx4u2nPJUtOrZi6VlAGstk88pLqjepaIkXlgAKK2OGv09WZi1c7MYWt2xQrjFT27G7yqJURSGhuncSCto2O0MoyvbTG6wAT4Ejg0xVSAVdTyn2PeJkBC4yKRBhUdHHuFurPphMSAzAXCPOwnAGgHOWkoVrwEoPUDl9CmVh6rySgDkGIlmTByaSCfmIwExYRx7SSBjX1bRID9MNtP8HEwzMWPG7vpRX6XYmwxgnMtUTY0DD8wIIw3CWNhvs-uwQ6kDEodFA4ZZr4oq2REuf2fOr4puMxv5puYPLT8qMZKjX3Qdo01Nk6sKK09Q-XX-Jk8zXogaWm9H94NeLbPxT5yWAM4">Demand for medical care by the elderly: a finite mixture approach</a>. <em>Journal of Applied Econometrics</em>, 12(3), 313-336.</p></li>
+<li><p>Grunfeld Y. (1958). <a class="reference external" href="https://www.proquest.com/docview/301899386?pq-origsite=summon&amp;accountid=14656">The determinants of corporate investment</a>. Ph.D. thesis, Department of Economics, University of Chicago.</p></li>
+<li><p>Harrison, D. and Rubinfeld, D.L. (1978). <a class="reference external" href="http://ubc.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwnV07T8MwELYQDLDwKCDeyghDaOy0TixVSICourBVYrRc50wBNVRtQeLfc-fEpYAQiMF5nB9JbOf8Obn7zFgqzpP4i04wgANV7iQgPC-gZTOligRsAiYRhfWLOSya6pz_8EOfyyZhgjiRSp5m-RmteClj0sBpm5NBV-_2aq6H88QvLTfPEBznfijk88BE9pkWQd-nMWplAmOwC-NPd4PdBS-eYHjyxS_wG7njH59pk63XkDS6rPrQFluCssFWg8fytMF2bz684TBhrQ6m22zWGZnJ00UPCiLY7TT9WTR8JmP6-6iKHBNr0TTEmbKIEHLWcQWMUBDiED7XcrwNUwZxJTIPk1qww_rdm_51L66XcYh5KomtVGZGtJwcEO-NQplVvCDqQwlKcGvBtp2yhjxghZFu4KRSTqZcDFomFZDusuXyuYQ9FqlMICISMLA0L3WpqrhpXAvz2MLl-ywOTajHFVmHDlZsVMea6lhnufZ1rAWmD-38x_RZ6Ay6BigV8NDYor_kvPR9Z34ZAHgEqmT9qlPTxvCGgeOcHncPdIhhjCHnWKrQw9no4N9XP2Rr3DMp05ejI7Y8m7zAsaeZOPGvjN9evwO2Ww2r">Hedonic prices and the demand for clean air</a>. <em>Journal of Environmental Economics and Management</em>, 5, 81–102.</p></li>
+<li><p>Henderson, H. V. and McCulloch, C. E. (1990). <a class="reference external" href="https://ecommons.cornell.edu/bitstream/handle/1813/31620/BU-1049-MA.pdf;jsessionid=1E54532D482EC351824111A78C797021?sequence=1">Transform or link?</a>. <em>Biometrics Unit Technical Reports; Number BU-1049-MA</em>.</p></li>
+<li><p>Mangasarian, O. L., Street, W. N., and Wolberg, W. H. (1995). <a class="reference external" href="http://ubc.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwlV1Nb9QwEB2xPSA4tHQLohRKDoDgsDSJndiRKlApVBx74PNk2bGDKui2jbf8Ff4uM46tbpZKFZdIO55NvNLLeLx-8waAla_z2UpMEAZXtlZKzllZGSk7WTBdtDa3ts6N61aoOnUqjSGWZaAJhkN9zJfML7dHCi-yfnt-MaPmUXTIGjtpTGAi2cDr-rKkvFsPbQwYBpyafxsvQMTDbPEOVxE5yQSH8iZKHH2iKv4TrsMadLQBKk03kU9WagPHAo___7vuwXpMT7ODAU-bcMvNp3A7seOnsJG6QGQxKEzh7pKk4RQ2o91nL6Oi9ast-LN_qvufb94RAX6xvxc-ZIPtkFDXj23vB_rfiR-b9dxmx_3ZdUO_T_TYgFtsfIXHtuOBinaK84wD9-Hz0YdPhx9nsSPEDPeBJWmp6pJ3VS1tzlvR8Ua6WljWlm3RaMkMs52R1jmJWGu4a6wwtugaaauGtQWaH8Da_GzuHkJWVlpwbgpthKOz3aZsmeRWC9mJxnG7DS8STNT5IPyhaMOEO0xF_WkUZ4qrSuTomEB0k-MzgpiK3UXx4un_F_9DX3qvDjCPw2yPMbxfcCPwLXrd6lgngdMmqa5lx6cJqyoiNTzQLz3xeRq4YWZbAYxXXgGJ27CT8K5iZPOqJEFAUnl8dP2XduDOUPVPjObHsLboL92TIGmxCxPx9TteMcDshnf0L2aRR50">Breast cancer diagnosis and prognosis via linear programming</a>. <em>Operations Research</em>, 43(4), 570-577.</p></li>
+<li><p>Wolberg, W. H. and Mangasarian, O. L. (1990). <a class="reference external" href="https://libkey.io/libraries/498/articles/35797998/full-text-file?utm_source=api_542">Multisurface method of pattern separation for medical diagnosis applied to breast cytology</a>. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 87(23), 9193–9196.</p></li>
+<li><p>Wood, P. (1967). <a class="reference external" href="https://ubc.summon.serialssolutions.com/2.0.0/link/0/eLvHCXMwfV1LS8NAEF6kIHhRW98voic9xGYzyW4WilCqxYN4ED2XzXRXim2qrRX99242SW0i7TGzEwiZycw3zOQbQsC_9txKTIg8yYw_U2awHBUyFIwr1JE0RZEG3sfKqM7FkoY-RE3fQBQWSFulc56WW0-Pt39DHRXe5YJuduHGcgJK5zDRgLs5k-ZCduluZWuKpgVvwvdP9a-_f9SNK554m2zmINNpZ15RJ2sqaZB1O-yJ0wap5x_01LnMWaevdshHayQnbzft4WvaSh5gq2mvnUycrkwblkVj7Rjw6DxIzLr55dPObPKlyqJB4nQsZXIu3iUv3bvnzr2b72Nw0WR5z6WxgV_UZ5iCCm1qF8VBMlTgaRUjgKAKgcUgI_SBa8H6QkrsM8Yx5MA57JFaMk7UAXGCCEMQ0gQ3oYKYU6GFBMG0L1CHmseH5LwwUu89o93o2XY5RL3ifRqdwnordPYzs841ipOjpSfHZMOEJZ4mKBqckNrnZKZOLSnDmXW2X2pLzng">Algebraic Model of the Lactation Curve in Cattle</a>. <em>Nature</em>, 216, 164–165.</p></li>
+</ul>
+</div>
+<div class="section" id="policies">
+<h2>Policies<a class="headerlink" href="#policies" title="Permalink to this headline">¶</a></h2>
+<p>See the general <a class="reference external" href="https://ubc-mds.github.io/policies/">MDS policies</a>.</p>
+</div>
+<div class="section" id="attribution">
+<h2>Attribution<a class="headerlink" href="#attribution" title="Permalink to this headline">¶</a></h2>
+<p>The course is built upon previous years’ materials developed by previous instructors.</p>
+</div>
+<div class="section" id="dealing-with-covid-19">
+<h2>Dealing With COVID-19<a class="headerlink" href="#dealing-with-covid-19" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/events-as-they-happen">COVID-19 pandemic</a> has affected us all in different ways: it is okay to not be okay, and we all need to support each other during this time. With that said:</p>
+<ul class="simple">
+<li><p>Our (virtual) door is always open, please feel free to talk to us about how you are doing and if/how we can help you (and if we cannot help you, we can point you in the direction of someone who can).</p></li>
+<li><p>You do not ever need to explain yourself. If you need support, need to miss a class, or need extra time for an assignment, just ask.</p></li>
+<li><p>UBC has <a class="reference external" href="https://students.ubc.ca/covid19">great student support resources</a> related to COVID-19 (and otherwise).</p></li>
+</ul>
+<div class="section" id="covid-safety-at-ubc">
+<h3>Covid Safety at UBC<a class="headerlink" href="#covid-safety-at-ubc" title="Permalink to this headline">¶</a></h3>
+<p><strong>Masks:</strong> Masks are required indoors, including in classrooms, as per the <a class="reference external" href="https://www2.gov.bc.ca/gov/content/covid-19/info/restrictions#masks">BC Public Health Officer orders</a>. For the purposes of this order, the term “masks” refers to medical and non-medical masks that cover our noses and mouths. Masks are a primary tool to make it harder for COVID-19 to find a new host. You will need to wear a medical or non-medical mask anytime you are indoors at UBC, for your own protection, and the safety and comfort of everyone else in the class. Please do not eat in the classroom. If you need to drink water/coffee/tea/etc., please keep your mask on between sips. Please note that there are some people who cannot wear a mask. These individuals are equally welcome in our class.</p>
+<p><strong>Vaccination:</strong> If you have not yet had a chance to get vaccinated against COVID-19, vaccines are available to you, free, and on campus (you can find more information <a class="reference external" href="http://www.vch.ca/covid-19/covid-19-vaccine">here</a>). The higher the rate of vaccination in our community overall, the lower the chance of spreading this virus. You are an important part of the UBC community. Please arrange to get vaccinated if you have not already done so.</p>
+<p><strong>COVID-19 testing:</strong> UBC will require COVID-19 testing for all students, faculty and staff, with exemptions provided for those who are vaccinated against COVID-19. You can find more information <a class="reference external" href="https://news.ubc.ca/2021/08/26/ubc-implements-vaccine-declaration-and-rapid-testing-for-covid-19/">here</a>.</p>
+<p><strong>Your personal health:</strong>
+If you are sick, it is important that you stay home – no matter what you think you may be sick with (e.g., cold, flu, other). A daily self-health assessment is required before attending campus. Every day, before leaving home, complete the self-assessment for COVID-19 symptoms <a class="reference external" href="https://bc.thrive.health/covid19/en">using this tool</a>.</p>
+<p>Stay home if you have COVID-19 symptoms, have recently tested positive for COVID-19, or are required to quarantine. You can check <a class="reference external" href="http://www.bccdc.ca/health-info/diseases-conditions/covid-19/self-isolation#Who">this website</a> to find out if you should self-isolate or self-monitor.</p>
+<p>Your precautions will help reduce risk and keep everyone safer. In this class, the marking scheme is intended to provide flexibility so that you can prioritize your health and still be able to succeed:</p>
+<ul class="simple">
+<li><p>all course notes will be provided online,</p></li>
+<li><p>all worksheets and lab assignments can be done and handed in online,</p></li>
+<li><p>all quizzes will be held online/in-person,</p></li>
+<li><p>live class recordings will be streamed and archived for later viewing online, and</p></li>
+<li><p>office hours will be held online/in-person.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="official-statement-from-ubc-regarding-the-online-learning-experience">
+<h2>Official statement from UBC regarding the online learning experience:<a class="headerlink" href="#official-statement-from-ubc-regarding-the-online-learning-experience" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><em>During this pandemic, the shift to online learning has greatly altered teaching and studying at UBC, including changes to health and safety considerations. Keep in mind that some UBC courses might cover topics that are censored or considered illegal by non-Canadian governments. This may include, but is not limited to, human rights, representative government, defamation, obscenity, gender or sexuality, and historical or current geopolitical controversies. If you are a student living abroad, you will be subject to the laws of your local jurisdiction, and your local authorities might limit your access to course material or take punitive action against you. UBC is strongly committed to academic freedom, but has no control over foreign authorities (please visit <a class="reference external" href="http://www.calendar.ubc.ca/vancouver/index.cfm?tree=3,33,86,0">http://www.calendar.ubc.ca/vancouver/index.cfm?tree=3,33,86,0</a> for an articulation of the values of the University conveyed in the Senate Statement on Academic Freedom). Thus, we recognize that students will have legitimate reason to exercise caution in studying certain subjects. If you have concerns regarding your personal situation, consider postponing taking a course with manifest risks, until you are back on campus or reach out to your academic advisor to find substitute courses. For further information and support, please visit: <a class="reference external" href="http://academic.ubc.ca/support-resources/freedom-expression">http://academic.ubc.ca/support-resources/freedom-expression</a>.</em></p>
+</div></blockquote>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='right-next' id="next-link" href="lecture-learning-objectives.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture Learning Objectives</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By G. Alexi Rodríguez-Arelis<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
